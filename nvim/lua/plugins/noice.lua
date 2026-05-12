@@ -4,6 +4,9 @@ return {
     event = "VeryLazy",
     opts = {
       lsp = {
+        hover = {
+          enabled = false,
+        },
         signature = {
           enabled = false,
         },
