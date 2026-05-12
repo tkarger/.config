@@ -38,7 +38,7 @@ vim.api.nvim_create_autocmd("BufRead", {
     end
   end,
 })
-
+--[[ A bit annoying 
 vim.api.nvim_create_augroup("toggleterm_autoopen", { clear = true })
 
 vim.api.nvim_create_autocmd("VimEnter", {
@@ -46,3 +46,4 @@ vim.api.nvim_create_autocmd("VimEnter", {
   group = "toggleterm_autoopen",
   callback = function() vim.cmd "ToggleTerm" end,
 })
+]]
