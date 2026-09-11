@@ -11,9 +11,17 @@ return {
       ensure_installed = {
         -- install language servers
         "lua-language-server",
+        "pyright",
+        "ruff",
+        "bash-language-server",
+        "yaml-language-server",
+        "gopls",
+        "helm-ls",
 
-        -- install formatters
+        -- install formatters and linters
         "stylua",
+        "shellcheck",
+        "shfmt",
 
         -- install debuggers
         "debugpy",

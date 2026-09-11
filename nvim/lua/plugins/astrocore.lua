@@ -24,24 +24,21 @@ return {
     },
     -- passed to `vim.filetype.add`
     filetypes = {
-      -- see `:h vim.filetype.add` for usage
+      -- treat helm chart templates as `helm` so helm_ls (not yamlls) attaches
       extension = {
-        foo = "fooscript",
-      },
-      filename = {
-        [".foorc"] = "fooscript",
+        tpl = "helm",
       },
       pattern = {
-        [".*/etc/foo/.*"] = "fooscript",
+        [".*/templates/.*%.ya?ml"] = "helm",
       },
     },
     -- vim options can be configured here
     options = {
       opt = { -- vim.opt.<key>
-        relativenumber = false, -- sets vim.opt.relativenumber
+        relativenumber = false, -- sets vim.opt.relativenumber (fixed line numbers)
         number = true, -- sets vim.opt.number
         spell = false, -- sets vim.opt.spell
-        signcolumn = "yes", -- sets vim.opt.signcolumn to yes
+        signcolumn = "auto", -- sets vim.opt.signcolumn
         wrap = true, -- sets vim.opt.wrap
       },
       g = { -- vim.g.<key>
